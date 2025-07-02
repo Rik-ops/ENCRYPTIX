@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #fafafa;
+}
+#main {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#left {
+  position: relative;
+  width: 40%;
+  background-color: #fff;
+  height: 100%;
+  box-shadow: 2px 0 20px rgba(0,0,0,0.05);
+}
+#lnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+}
+#lnavr {
+  display: flex;
+  align-items: center;
+}
+#lnavr a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+#lnavr a:hover {
+  color: royalblue;
+}
+#lnavr i {
+  font-size: 18px;
+  color: royalblue;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#lnavr i:hover {
+  transform: scale(1.2);
+}
+#textcenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: fadeIn 1s ease-in;
+  text-align: center;
+}
+#textcenter h1 {
+  font-size: 70px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+#textcenter p {
+  font-size: 14px;
+  color: #666;
+  max-width: 300px;
+  line-height: 22px;
+  margin: auto;
+  margin-bottom: 25px;
+}
+#textcenter a {
+  display: inline-block;
+  text-decoration: none;
+  color: royalblue;
+  border: 1px solid royalblue;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+#textcenter a:hover {
+  background-color: royalblue;
+  color: white;
+}
+
+#right {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#rtop {
+  display: flex;
+  width: 100%;
+  height: 50%;
+}
+#rtopleft, #rtopright {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+#rtopleft {
+  width: 55%;
+  background-image: url('https://images.unsplash.com/photo-1592187270271-9a4b84faa228?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8b3JhbmdlfGVufDB8fDB8fHww');
+}
+#rtopright {
+  width: 45%;
+  background-image: url('https://media.istockphoto.com/id/468006888/photo/orange-cupcake-with-sparkler.jpg?s=612x612&w=0&k=20&c=iG8wLcH2W3VZl3SmYVG_Zc5W_yhiE5IeYyixhWohsrQ=');
+}
+#rbottom {
+  width: 100%;
+  height: 50%;
+  background-image: url('https://media.istockphoto.com/id/1348247165/photo/build-your-brand-symbol-businessman-turns-wooden-cubes-and-changes-the-word-build-to-brand.jpg?s=612x612&w=0&k=20&c=1cvK4nuN5jMadNF3kWHS-GS1OlCLGSNRVuwUFdeRt88=');
+  background-size: cover;
+  background-position: center;
+}
+#textcenter a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: royalblue;
+  border: 1px solid royalblue;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+#textcenter a:hover {
+  background-color: royalblue;
+  color: white;
+  transform: translateY(-2px);
+}
+
+
+@media (max-width: 768px) {
+  #main {
+    flex-direction: column;
+  }
+  #left, #right {
+    width: 100%;
+    height: 50%;
+  }
+  #textcenter h1 {
+    font-size: 48px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
